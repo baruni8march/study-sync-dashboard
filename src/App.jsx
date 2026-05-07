@@ -3,6 +3,7 @@ import HeroSection from "./components/HeroSection"
 import SummaryCards from "./components/SummaryCards"
 import FocusCard from "./components/FocusCard"
 import CourseManager from "./components/CourseManager"
+import TaskManager from "./components/TaskManager"
 function App() {
   return (
     <div className="min-h-screen bg-linear-to-br from-pink-50 via-purple-50 to-indigo-50 text-slate-900">
@@ -13,6 +14,7 @@ function App() {
         <SummaryCards />
         <FocusCard />
         <CourseManager />
+        <TaskManager />
       </main>
     </div>
   )
