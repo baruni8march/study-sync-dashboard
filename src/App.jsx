@@ -4,6 +4,7 @@ import SummaryCards from "./components/SummaryCards"
 import FocusCard from "./components/FocusCard"
 import CourseManager from "./components/CourseManager"
 import TaskManager from "./components/TaskManager"
+import StudyLogger from "./components/StudyLogger"
 function App() {
   return (
     <div className="min-h-screen bg-linear-to-br from-pink-50 via-purple-50 to-indigo-50 text-slate-900">
@@ -15,6 +16,7 @@ function App() {
         <FocusCard />
         <CourseManager />
         <TaskManager />
+        <StudyLogger />
       </main>
     </div>
   )
