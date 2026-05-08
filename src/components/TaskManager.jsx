@@ -1,7 +1,8 @@
 import { useState } from "react"
+import useLocalStorage from "../hooks/useLocalStorage"
 
 function TaskManager() {
-  const [tasks, setTasks] = useState([])
+  const [tasks, setTasks] = useLocalStorage("studysync-tasks", [])
   const [taskTitle, setTaskTitle] = useState("")
   const [priority, setPriority] = useState("medium")
   const [dueDate, setDueDate] = useState("")

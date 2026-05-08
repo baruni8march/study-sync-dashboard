@@ -1,7 +1,7 @@
 import { useState } from "react"
-
+import useLocalStorage from "../hooks/useLocalStorage"
 function CourseManager() {
-  const [courses, setCourses] = useState([])
+ const [courses, setCourses] = useLocalStorage("studysync-courses", [])
   const [courseName, setCourseName] = useState("")
   const [unit, setUnit] = useState("pages")
   const [total, setTotal] = useState("")
