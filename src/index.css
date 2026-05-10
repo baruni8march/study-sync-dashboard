@@ -1,1 +1,53 @@
 @import "tailwindcss";
+html {
+  scroll-behavior: smooth;
+}
+
+.dark .min-h-screen {
+  background: linear-gradient(to bottom right, #0f172a, #1e1b4b, #312e81);
+}
+
+.dark nav,
+.dark section {
+  background-color: rgba(15, 23, 42, 0.86);
+  border-color: rgba(244, 114, 182, 0.25);
+}
+
+.dark .bg-white\/85,
+.dark .bg-white\/80 {
+  background-color: rgba(15, 23, 42, 0.86);
+}
+
+.dark .bg-pink-50 {
+  background-color: rgba(30, 41, 59, 0.85);
+}
+
+.dark .bg-white {
+  background-color: rgba(30, 41, 59, 0.95);
+}
+
+.dark .text-slate-900,
+.dark .text-slate-800,
+.dark .text-slate-700 {
+  color: #f8fafc;
+}
+
+.dark .text-slate-600,
+.dark .text-slate-500 {
+  color: #cbd5e1;
+}
+
+.dark input,
+.dark select {
+  background-color: #1e293b;
+  color: #f8fafc;
+  border-color: rgba(244, 114, 182, 0.3);
+}
+
+.dark input::placeholder {
+  color: #94a3b8;
+}
+
+.dark .border-pink-100 {
+  border-color: rgba(244, 114, 182, 0.25);
+}
