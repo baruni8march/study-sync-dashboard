@@ -1,6 +1,6 @@
 function HeroSection() {
   return (
-    <section className="bg-white/85 backdrop-blur-md rounded-[2rem] shadow-sm border border-pink-100 p-8 mb-8">
+    <section id="dashboard" className="bg-white/85 backdrop-blur-md rounded-4xl shadow-sm border border-pink-100 p-8 mb-8 scroll-mt-24">
       <p className="text-sm font-bold text-pink-500 mb-2">
         Personal Study Dashboard
       </p>

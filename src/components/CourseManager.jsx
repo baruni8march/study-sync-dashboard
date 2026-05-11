@@ -58,7 +58,7 @@ function CourseManager() {
   }
 
   return (
-    <section className="mt-8 bg-white/85 rounded-3xl shadow-sm border border-pink-100 p-6">
+    <section id="courses" className="mt-8 bg-white/85 rounded-3xl shadow-sm border border-pink-100 p-6 scroll-mt-24">
       <div className="mb-6">
         <p className="text-sm font-bold text-pink-500 mb-1">
           Course Manager
