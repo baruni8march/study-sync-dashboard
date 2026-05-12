@@ -1,0 +1,14 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "Riddhi",
+            "email": "riddhi@gmail.com",
+            "passwordHash": "3b53d697366b3b996281eaaefae5c9b95886585b2cddea5860e5907f8c899bc0",
+            "salt": "197d8ad3ecf17c721ce69935555df6a8"
+        }
+    ],
+    "courses": [],
+    "tasks": [],
+    "sessions": []
+}
