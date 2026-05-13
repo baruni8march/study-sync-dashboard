@@ -7,10 +7,21 @@ import CourseManager from "./components/CourseManager"
 import TaskManager from "./components/TaskManager"
 import StudyLogger from "./components/StudyLogger"
 import MonthlyGraph from "./components/MonthlyGraph"
+import AuthPage from "./components/AuthPage"
 
 function App() {
   const [isDark, setIsDark] = useState(() => {
     return localStorage.getItem("studysync-theme") === "dark"
+  })
+
+  const [currentUser, setCurrentUser] = useState(() => {
+    const savedUser = localStorage.getItem("studysync-user")
+
+    if (savedUser) {
+      return JSON.parse(savedUser)
+    }
+
+    return null
   })
 
   useEffect(() => {
@@ -21,10 +32,32 @@ function App() {
     setIsDark(!isDark)
   }
 
+  function handleLogin(user) {
+    setCurrentUser(user)
+  }
+
+  function handleLogout() {
+    localStorage.removeItem("studysync-user")
+    setCurrentUser(null)
+  }
+
+  if (!currentUser) {
+    return (
+      <div className={isDark ? "dark" : ""}>
+        <AuthPage onLogin={handleLogin} />
+      </div>
+    )
+  }
+
   return (
     <div className={isDark ? "dark" : ""}>
       <div className="min-h-screen bg-linear-to-br from-pink-50 via-purple-50 to-indigo-50 text-slate-900 transition">
-        <Navbar isDark={isDark} toggleTheme={toggleTheme} />
+        <Navbar
+          isDark={isDark}
+          toggleTheme={toggleTheme}
+          user={currentUser}
+          onLogout={handleLogout}
+        />
 
         <main className="max-w-6xl mx-auto px-6 py-10">
           <HeroSection />
